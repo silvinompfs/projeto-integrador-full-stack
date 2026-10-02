@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 
 const produtoRoutes = require("./src/routes/produtoRoutes");
 const fornecedorRoutes = require("./src/routes/fornecedorRoutes");
@@ -6,6 +7,7 @@ const associacaoRoutes = require("./src/routes/associacaoRoutes");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/produtos", produtoRoutes);
@@ -17,3 +19,4 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
+
