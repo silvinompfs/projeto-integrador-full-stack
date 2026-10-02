@@ -1,0 +1,12 @@
+backend/node_modules/
+frontend/node_modules/
+
+backend/estoque.db
+
+.env
+.env.*
+
+*.log
+
+.DS_Store
+Thumbs.db
