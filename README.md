@@ -93,7 +93,7 @@ projeto-integrador-full-stack/
 ```
 
 ## Como executar o projeto
-- Backend
+- Backend:
 Entre na pasta:
 cd backend
 
@@ -106,7 +106,7 @@ npm start
 O backend será executado em:
 http://localhost:3000
 
-- Frontend
+- Frontend:
 Em outro terminal, entre na pasta:
 cd frontend
 
