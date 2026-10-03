@@ -106,7 +106,7 @@ npm start
 O backend será executado em:
 http://localhost:3000
 
-- Frontend:
+- Frontend:<br>
 Em outro terminal, entre na pasta:
 cd frontend
 
@@ -130,6 +130,6 @@ O projeto utiliza Git e GitHub para controle de versão.
 Marcos Silvino
 
 ## Instituição
-FACULDADE GRAN
-Curso de Análise e Desenvolvimento de Sistemas
+FACULDADE GRAN<br><br>
+Curso de Análise e Desenvolvimento de Sistemas<br>
 Disciplina: Projeto Integrador
