@@ -93,7 +93,7 @@ projeto-integrador-full-stack/
 ```
 
 ## Como executar o projeto
-- Backend:
+- Backend:<br>
 Entre na pasta:
 cd backend
 
