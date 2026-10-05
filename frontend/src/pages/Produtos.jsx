@@ -173,7 +173,7 @@ function Produtos() {
   }
 
   return (
-    <div>
+    <div className="page-card">
       <h2>Produtos</h2>
 
       <h3>{produtoEmEdicao ? "Editar Produto" : "Cadastrar Produto"}</h3>
@@ -265,10 +265,12 @@ function Produtos() {
             onChange={(event) => setImagem(event.target.files[0])}
           />
 
-          {imagemAtual && produtoEmEdicao && <p>Imagem atual: {imagemAtual}</p>}
+          {imagemAtual && produtoEmEdicao && (
+            <p className="info-text">Imagem atual: {imagemAtual}</p>
+          )}
         </div>
 
-        <button type="submit">
+        <button className="btn-primary" type="submit">
           {produtoEmEdicao ? "Salvar alterações" : "Cadastrar"}
         </button>
       </form>
@@ -278,15 +280,24 @@ function Produtos() {
       <h3>Produtos cadastrados</h3>
 
       {produtos.map((produto) => (
-        <div key={produto.id}>
+        <div key={produto.id} className="item-card">
           <h4>{produto.nome}</h4>
           <p>Código de barras: {produto.codigo_barras}</p>
           <p>Quantidade: {produto.quantidade}</p>
           <p>Categoria: {produto.categoria}</p>
 
-          <button onClick={() => handleEditar(produto)}>Editar</button>
+          <div className="item-actions">
+            <button className="btn-edit" onClick={() => handleEditar(produto)}>
+              Editar
+            </button>
 
-          <button onClick={() => handleExcluir(produto.id)}>Excluir</button>
+            <button
+              className="btn-delete"
+              onClick={() => handleExcluir(produto.id)}
+            >
+              Excluir
+            </button>
+          </div>
         </div>
       ))}
     </div>

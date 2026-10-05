@@ -183,7 +183,7 @@ function Fornecedores() {
   }
 
   return (
-    <div>
+    <div className="page-card">
       <h2>Fornecedores</h2>
 
       <h3>
@@ -254,7 +254,7 @@ function Fornecedores() {
           {erros.contatoPrincipal && <p>{erros.contatoPrincipal}</p>}
         </div>
 
-        <button type="submit">
+        <button className="btn-primary" type="submit">
           {fornecedorEmEdicao ? "Salvar alterações" : "Cadastrar"}
         </button>
       </form>
@@ -264,16 +264,28 @@ function Fornecedores() {
       <h3>Fornecedores cadastrados</h3>
 
       {fornecedores.map((fornecedor) => (
-        <div key={fornecedor.id}>
+        <div key={fornecedor.id} className="item-card">
           <h4>{fornecedor.nome}</h4>
           <p>CNPJ: {fornecedor.cnpj}</p>
           <p>Telefone: {fornecedor.telefone}</p>
           <p>E-mail: {fornecedor.email}</p>
           <p>Contato: {fornecedor.contato_principal}</p>
 
-          <button onClick={() => handleEditar(fornecedor)}>Editar</button>
+          <div className="item-actions">
+            <button
+              className="btn-edit"
+              onClick={() => handleEditar(fornecedor)}
+            >
+              Editar
+            </button>
 
-          <button onClick={() => handleExcluir(fornecedor.id)}>Excluir</button>
+            <button
+              className="btn-delete"
+              onClick={() => handleExcluir(fornecedor.id)}
+            >
+              Excluir
+            </button>
+          </div>
         </div>
       ))}
     </div>

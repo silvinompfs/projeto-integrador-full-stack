@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.app-header {
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  margin-bottom: 16px;
+}
+
+.menu {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.menu button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.menu button:hover {
+  background-color: #d1d5db;
+}
+
+.page-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+form p {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.btn-primary {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-edit {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  background-color: #f59e0b;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.btn-delete {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.item-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.item-card h4 {
+  margin-top: 0;
+}
+
+.item-actions {
+  margin-top: 12px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 28px 0;
+}
+
+.info-text {
+  color: #475569;
+  font-size: 14px;
+}
+
+form .btn-primary {
+  width: fit-content;
+}
+
+.association-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.association-form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-details {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+.product-details h3 {
+  margin-top: 0;
+}
+
+.product-details p {
+  margin: 8px 0;
+}
+
+.association-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.association-section {
+  min-width: 0;
+}
+
+.association-section h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .association-form {
+    grid-template-columns: 1fr;
+  }
+
+  .association-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .association-form .btn-primary {
+    width: 100%;
+  }
+}
+
+.menu button.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.page-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.page-card h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.item-card {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.item-card p {
+  margin: 6px 0;
+}
+
+.btn-edit:hover {
+  filter: brightness(0.95);
+}
+
+.btn-delete:hover {
+  filter: brightness(0.9);
+}
+
+.menu button {
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.menu button.active:hover {
+  background-color: #1d4ed8;
+}
+
+input,
+select,
+textarea {
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 20px 12px;
+  }
+
+  .page-card {
+    padding: 18px;
+  }
+
+  .menu button {
+    flex: 1;
+  }
+}
