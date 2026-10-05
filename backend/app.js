@@ -5,6 +5,8 @@ const produtoRoutes = require("./src/routes/produtoRoutes");
 const fornecedorRoutes = require("./src/routes/fornecedorRoutes");
 const associacaoRoutes = require("./src/routes/associacaoRoutes");
 
+require("./src/database/seed");
+
 const app = express();
 
 app.use(cors());

@@ -8,6 +8,8 @@ const db = new sqlite3.Database("./estoque.db", (erro) => {
   }
 });
 
+db.run("PRAGMA foreign_keys = ON");
+
 db.run(`
   CREATE TABLE IF NOT EXISTS fornecedores (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
